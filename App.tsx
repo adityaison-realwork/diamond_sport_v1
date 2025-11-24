@@ -27,7 +27,8 @@ const App: React.FC = () => {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen font-sans text-slate-900">
         <Navbar />
-        <main className="flex-grow pt-20">
+        {/* Removed pt-20 so navbar overlays the hero sections */}
+        <main className="flex-grow">
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />
