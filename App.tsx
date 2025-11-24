@@ -27,8 +27,7 @@ const App: React.FC = () => {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen font-sans text-slate-900">
         <Navbar />
-        {/* Removed pt-20 so the content sits behind the fixed, transparent navbar initially */}
-        <main className="flex-grow">
+        <main className="flex-grow pt-20">
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />
