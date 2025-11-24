@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sovika Women's Clothing | Vadodara</title>
-    <meta name="description" content="Elegant Fashion for the Modern Woman in Gotri, Vadodara. Shop the latest Ethnic and Western wear." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Sports | Vadodara's Premier Sports Destination</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Montserrat', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+              sport: ['Oswald', 'sans-serif'],
             },
             colors: {
-              rose: {
-                50: '#fff1f2',
-                100: '#ffe4e6',
-                900: '#881337',
-              },
-              stone: {
-                800: '#292524',
-                900: '#1c1917',
-              },
-              gold: {
-                400: '#fbbf24', 
-                500: '#f59e0b',
-                600: '#d97706',
+              diamond: {
+                black: '#020617', // Ink Black
+                navy: '#0f172a', // Jersey Navy
+                gold: '#fbbf24', // Trophy Gold (Punchier)
+                accent: '#ef4444', // Action Red
+                light: '#f1f5f9', // Cool Gray
               }
+            },
+            backgroundImage: {
+              'mesh': "radial-gradient(#fbbf24 1px, transparent 1px)",
+              'stripe': "linear-gradient(135deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent)",
             }
           }
         }
@@ -37,18 +35,40 @@
     </script>
     <style>
       body {
-        background-color: #fff1f2; /* rose-50 */
-        color: #1c1917; /* stone-900 */
+        background-color: #f1f5f9;
+        color: #0f172a;
       }
-      /* Hide scrollbar for horizontal scroll areas */
+      .skew-box {
+        transform: skewX(-12deg);
+      }
+      .unskew-text {
+        transform: skewX(12deg);
+      }
+      .clip-sport {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+      }
+      /* Hide scrollbar for chrome/safari/opera */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
+      /* Hide scrollbar for IE, Edge and Firefox */
       .no-scrollbar {
-        -ms-overflow-style: none; 
-        scrollbar-width: none; 
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
       }
     </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
 </head>
   <body>
     <div id="root"></div>
